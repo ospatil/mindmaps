@@ -1,0 +1,15 @@
+{
+  "name": "mindmaps",
+  "version": "1.0.0",
+  "description": "Using markmap and rendered with gGithub Pages.",
+  "private": true,
+  "scripts": {
+    "mm": "npx markmap"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "markmap-cli": "^0.15.4"
+  }
+}

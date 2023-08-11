@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.15.4/dist/style.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.8.5/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.15.4/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.15.4/dist/index.js"></script><script>(r => {
+          setTimeout(r);
+        })(() => {
+  const {
+    markmap,
+    mm
+  } = window;
+  const toolbar = new markmap.Toolbar();
+  toolbar.attach(mm);
+  const el = toolbar.render();
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root, jsonOptions) => {
+          const markmap = getMarkmap();
+          window.mm = markmap.Markmap.create('svg#mindmap', (getOptions || markmap.deriveOptions)(jsonOptions), root);
+        })(() => window.markmap,null,{"type":"heading","depth":0,"payload":{"lines":[1,2]},"content":"IAM","children":[{"type":"heading","depth":1,"payload":{"lines":[3,4]},"content":"Terms","children":[{"type":"list_item","depth":2,"payload":{"lines":[5,7]},"content":"<mark>Resources</mark><br>\nThese are objects that are stored in IAM. As with other AWS services, you can add, edit, and remove resources from IAM.","children":[{"type":"list_item","depth":3,"payload":{"lines":[7,8]},"content":"Users","children":[]},{"type":"list_item","depth":3,"payload":{"lines":[8,9]},"content":"Groups","children":[]},{"type":"list_item","depth":3,"payload":{"lines":[9,10]},"content":"Roles","children":[]},{"type":"list_item","depth":3,"payload":{"lines":[10,11]},"content":"Identity Providers","children":[]}]},{"type":"list_item","depth":2,"payload":{"lines":[12,14]},"content":"<mark>Identities</mark><br>\nWe can attach a policy to an IAM identity.","children":[{"type":"list_item","depth":3,"payload":{"lines":[14,15]},"content":"Users","children":[]},{"type":"list_item","depth":3,"payload":{"lines":[15,16]},"content":"Groups","children":[]},{"type":"list_item","depth":3,"payload":{"lines":[16,17]},"content":"Roles","children":[]}]},{"type":"list_item","depth":2,"payload":{"lines":[18,20]},"content":"<mark>Entities</mark><br>\nThese are the IAM resource objects that AWS uses for authentication.","children":[{"type":"list_item","depth":3,"payload":{"lines":[20,21]},"content":"Users","children":[]},{"type":"list_item","depth":3,"payload":{"lines":[21,22]},"content":"Roles","children":[]}]},{"type":"list_item","depth":2,"payload":{"lines":[23,25]},"content":"<mark>Principals</mark><br>\nA person or application that uses the AWS account root user, an IAM user, or an IAM role to sign in and make requests to AWS. Principals include federated users and assumed roles.","children":[]}]}]},{"colorFreezeLevel":2,"maxWidth":300,"embedAssets":true})</script>
+</body>
+</html>
